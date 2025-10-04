@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Gerador de Código EAN-13</title>
+</head>
+
+
+
+<body>
+    
+    <div id="main_screen">
+
+        <div id="inputContainer">
+            <input type="search" enterkeyhint="enter" inputmode="numeric" maxlength="12" placeholder="Ex: 210987654321" id="inputCode">
+            <button onclick="onClickGerar()">Gerar</button>
+            <button onclick="onClickGerarAleatorio()">Aleatório</button>
+            <button onclick="barcode.innerHTML=''">Limpar</button>
+
+            <input type="color" id="inputColorFG" value="#000000">
+            <input type="color" id="inputColorBG" value="#ffffff">
+
+        </div>
+
+        <div id="barcode_container">
+            <div id="barcode" color="#ff0000"></div>
+            <div id="barcode_number"></div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

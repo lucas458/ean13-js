@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: #181818;
+    color: #fff;
+    user-select: none;
+}
+
+
+
+#main_screen{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+
+
+
+#inputContainer{
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    position: absolute;
+    top: 16px;
+}
+
+#inputContainer *{
+    outline: none;
+}
+
+#inputContainer input{
+    border: none;
+    height: 100%;
+    padding: 0 4px;
+}
+
+#inputContainer button{
+    height: 100%;
+    padding: 0 4px;
+}
+
+
+
+
+#barcode_container{
+    transform: scale(3);
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#barcode_container:has(#barcode *) {
+    visibility: visible;
+}
+
+#barcode{
+    display: flex;
+    padding: 8px;
+    background-color: #fff;
+    
+}
+
+.bar{
+    width: 1px;
+    height: 64px;
+    flex-shrink: 0;
+}
+
+.barLong{
+    height: 80px;
+}
+
+
+:root{
+    --fg: #000000;
+}
+
+#barcode .dark{
+    background-color: var(--fg);
+}
+
+
+#barcode_number{
+    font-family: monospace;
+}
